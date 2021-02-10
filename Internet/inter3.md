@@ -226,6 +226,6 @@ DOM은 마크업과 1:1의관계를 맺는다.
 
 ## 출처
 
-[MDN사이트](https://upcount.tistory.com/97)
+[by 평범한 20대](https://upcount.tistory.com/97)
 
 <div style="text-align: right">작성일 : 2021.02.10</div>
