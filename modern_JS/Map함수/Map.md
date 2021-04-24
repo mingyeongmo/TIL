@@ -186,9 +186,9 @@ console.log(numbersREverse);
 > [12, 10, 8, 6, 4, 2]
 
 **5. Array안에 Array가 있는 경우를 보자.**
-var numbers = [[1,2,3],[4,5,6],[7,8,9]]; // array안에 array가 있는 경우
+var numbers = [[[1,2,3],[4,5,6],[7,8,9]]]; // array안에 array가 있는 경우
 var newNumbers = numbers.map(array => array.map(number => number \*2));
 console.log(newNumbers);
 
 > result
-> [[2,4,6],[8,10,12],[14,16,18]]
+> [[[2,4,6],[8,10,12],[14,16,18]]]
