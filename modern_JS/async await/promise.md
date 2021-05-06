@@ -339,3 +339,7 @@ getData().then(function(result) {
 ![발생한 에러를 성공적으로 콘솔에 출력한 모습](https://joshua1988.github.io/images/posts/web/javascript/catch-handling-error.png)
 
 **따라서, 더 많은 예외 처리 상황을 위해 프로미스의 끝에 가급적 catch()를 붙이시기 바랍니다.**
+
+## 마무리
+
+현대 웹 앱의 특성상 앞으로도 프로미스는 더 많이 사용될 것 같습니다. 숙련된 웹 개발자가 되기 위해 위 개념과 사용법을 꼭 숙지하시기 바랍니다 :)
