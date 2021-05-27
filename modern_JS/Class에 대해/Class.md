@@ -93,3 +93,97 @@ const square = new Rectangle(10, 10);
 
 console.log(square.area); // 100
 ```
+
+## 정적 메서드와 속성
+
+static 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utillity) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
+
+```
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    static displayName = "Point";
+    static distance(a, b) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+
+        return Math.hypot(dx, dy);
+    }
+}
+
+const p1 = new Point(5, 5);
+const p2 = new Point(10, 10);
+p1.displayName; // undefined
+p1.distance; // undefined
+p2.displayName; // undefined
+p2.distance; // undefined
+
+console.log(Point.displayName); // "Point"
+console.log(Point.distance(p1, p2)); // 7.0710678118654755
+```
+
+## 프로토타입 및 정적 메서드를 사용한 `this` 바인딩
+
+메서드를 변수에 할당 한 다음 호출하는 것과 같이, 정적 메서드나 프로토타입 메서드가 `this`값 없이 호출될 때, `this`값은 메서드 안에서 `undefined`가 됩니다. 이 동작은 `"use strict"` 명령어 없이도 같은 방식으로 동작하는데, `class` 문법 안에 있는 코드는 항상 strict mode로 실행되기 때문입니다.
+
+```
+class Animal {
+    speak() {
+        return this;
+    }
+    static eat() {
+        return this;
+    }
+}
+
+let obj = new Animal();
+obj.speak(); // ths Animal object
+let speak = obj.speak;
+speak(); // undefined
+
+Animal.eat() // class Animal
+let eat = Animal.eat;
+eat(); // undefined
+```
+
+위의 작성된 코드를 전통적 방식의 함수기반의 non-strict mode 구문으로 재작성하면 `this`메서드 호출은 기본적으로 전역 객체인 초기 `this` 값에 자동으로 바인딩 됩니다. Strict mode에서는 자동 바인딩이 바랫ㅇ하지 않습니다. `this`값은 전달된 대로 유지됩니다.
+
+```
+function Animal() { }
+
+Animal.prototype.speak = function() {
+    return this;
+}
+
+Animal.eat = function() {
+    return this;
+}
+
+let obj = new Animal();
+let speak = obj.speak;
+speak(); // global object (in non-strict mode)
+
+let eat = Animal.eat;
+eat(); // global object (in non-strict mode)
+```
+
+## 인스턴스 속성
+
+인스턴스 속성은 반드시 클래스 메서드 내에 정의되어야 합니다.
+
+```
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+```
+
+정적 (클래스사이드)속성과 프로토타입 데이터 속성은 반드시 클래스 선언부 바깥쪽에서 정의되어야 합니다.
+
+> Rectangle.staticWidth = 20;
+> Rectangle.prototype.prototypeWidth = 25;
