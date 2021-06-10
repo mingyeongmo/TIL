@@ -127,3 +127,27 @@ export default App;
 - props를 불러올 필요 없이 바로 호출 할 수 있다.
 
 > ![this.props2](https://media.vlpt.us/images/sdc337dc/post/f9e6559e-ba34-4dd5-bcb7-c0d219e8486d/image.png)
+
+#### 3) LifeCycle
+
+- LifeCycle API는, 컴포넌트가 DOM 위에 생성되기 전 후 및 데이터가 변경되어 상태를 업데이트하기 전 후로 실행되는 메소드들이다.
+
+- constructor / componentWillMount / componentDidMount ...
+
+![LifeCycle](https://media.vlpt.us/images/sdc337dc/post/dcc5b5b5-5f78-4a1b-8afa-5891fbc5b789/image.png)
+
+#### 4) 이벤트 핸들링
+
+**클래스형 컴포넌트에서 이벤트 핸들링**
+
+- 함수 선언시 에로우 화살로 바로 선언 가능하다.
+- 요소에서 적용하기 위해서는 this를 붙여야한다.
+
+![](https://media.vlpt.us/images/sdc337dc/post/2baf3230-55fa-4b2a-aa02-dd2932613515/image.png)
+
+**함수형 컴포넌트에서 이벤트 핸들링**
+
+- const 키워드 + 함수 형태로 선언 해야한다.
+- 요소에서 적용하기 위해서는 this가 필요없다.
+
+> ![](https://media.vlpt.us/images/sdc337dc/post/9bc0771d-6192-469f-a788-18ef7a09a297/image.png)
