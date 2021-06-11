@@ -7,21 +7,18 @@
     <title>Document</title>
 </head>
 <script>
-    // let user = {
-    //     name: '민경모',
-    //     age: 17,
-    // };
+function user(name,age,dream){
+    return {
+    name,
+    age,
+    dream,
+}
+}
 
-    // let key = "name";
-    // alert(user[key]);
+let minmo = user("rudah",17,"fe");
 
-    let fruit = prompt("어떤 과일의 값을 알고 싶습니까?", "apple");
-    
-    let sale = {
-        [fruit]: 5, // 변수 fruit에서 프로퍼티 이름을 동적으로 받아 옵니다.
-    };
+console.log(minmo);
 
-    alert(sale.apple);
 </script>
 <body>
     
