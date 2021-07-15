@@ -17,7 +17,7 @@ const StyledButton = styled.button`
     line-height: 1.5;
     border: 1px solid lightgray;
 
-    color: ${props} => props.color || "gray"};
+    color: ${(props) => props.color || "gray"};
     background: ${(props) => props.background || "white"};
 `;
 
