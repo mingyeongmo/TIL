@@ -68,6 +68,10 @@ const StyledButton = styled.button`
       border-color: navy;
     `}
 `;
+
+function Button({ children, ...props }) {
+  return <StyledButton {...props}>{children}</StyledButton>;
+}
 ```
 
 참고로 넘겨야할 prop 값이 많아질 경우, 위와 같이 `...props` 구문을 사용해서 `children` 외에 모든 prop을 간편하게 전달할 수 있습니다.
