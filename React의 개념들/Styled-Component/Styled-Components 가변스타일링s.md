@@ -67,6 +67,10 @@ const StyledButton = styled.button`
       background: navy;
       border-color: navy;
     `}
+    
+function Button({ children, ...props }) {
+  return <StyledButton {...props}>{children}</StyledButton>;
+}
 `;
 ```
 
