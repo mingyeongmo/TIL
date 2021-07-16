@@ -52,6 +52,6 @@ SSR에선 브라우저가 페이지를 요청할 때마다 해당 페이지에 �
 ### 단점
 
 - 매번 페이지를 요청할 때마다 새로고침 되기 때문에 사용자 경험이 SPA에 비해서 좋지 않다.
-- 서버에 매번 요청을 하기 때문에 서버의 부하가 커진다..
+- 서버에 매번 요청을 하기 때문에 서버의 부하가 커진다.
 
 [baeharam님의 Github](https://github.com/baeharam/Must-Know-About-Frontend/blob/main/Notes/frontend/csr-ssr.md)
