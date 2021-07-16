@@ -17,7 +17,7 @@ const StyledButton = styled.button`
     line-height: 1.5;
     border: 1px solid lightgray;
 
-    color: ${props} => props.color || "gray"};
+    color: ${(props) => props.color || "gray"};
     background: ${(props) => props.background || "white"};
 `;
 
@@ -67,6 +67,10 @@ const StyledButton = styled.button`
       background: navy;
       border-color: navy;
     `}
+    
+function Button({ children, ...props }) {
+  return <StyledButton {...props}>{children}</StyledButton>;
+}
 `;
 
 function Button({ children, ...props }) {
