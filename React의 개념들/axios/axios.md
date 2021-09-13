@@ -45,7 +45,7 @@
 
 ### Fetch API
 
-```
+```javascript
 //fetch
 const url ='http://localhost3000/test`
 const option ={
@@ -65,7 +65,7 @@ const option ={
 
 ### axios
 
-```
+```javascript
 // axios
 const option ={
   url ='http://localhost3000/test`
