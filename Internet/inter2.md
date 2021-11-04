@@ -10,7 +10,7 @@ HTTP는 웹에서만 사용하는 프로토콜로 TCP/IP 기반으로 한 지점
 ## HTTP의 특징
 
 - HTTP 메시지는 HTTP 서버와 HTTP 클라이언트에 의해서 해석이 됩니다.
-- TCP/IP를 이용하는 응용 포로토콜입니다.
+- TCP/IP를 이용하는 응용 프로토콜입니다.
 - HTTP는 연결 상태를 유지하지 않는 비연결성 프로토콜입니다. (이러한 단점을 해결하기 위해 [Cookie](https://ko.wikipedia.org/wiki/HTTP_%EC%BF%A0%ED%82%A4)와 [Seesion](https://mohwaproject.tistory.com/entry/HTTP-Session-%EC%9D%B4%EB%9E%80) 등장)
 - HTTP는 연결을 유지하지 않는 프로토콜이기 때문에 요청/응답(request/response) 방식으로 동작합니다.
 
